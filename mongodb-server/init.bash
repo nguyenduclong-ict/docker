@@ -4,6 +4,10 @@ CONTAINER_NAME=mongodb-server
 DATA_DIR=~/.data/mongodb
 USER=root
 PASSWORD=long97
+
+# Stop container
+docker stop $CONTAINER_NAME
+docker rm $CONTAINER_NAME
 # Create new contanier
 docker run \
     --name=$CONTAINER_NAME \

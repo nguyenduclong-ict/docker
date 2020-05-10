@@ -2,7 +2,9 @@
 CONTAINER_NAME=${1-mysql-server}
 DATA_DIR=~/.data/mysql
 PASSWORD=long97
-
+# Stop container
+docker stop $CONTAINER_NAME
+docker rm $CONTAINER_NAME
 # Create new contanier
 docker run \
     --name=$CONTAINER_NAME \
