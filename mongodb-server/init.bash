@@ -16,6 +16,7 @@ docker run \
     -v $DATA_DIR:/data/db \
     --network=database \
     -p 27017:27017 \
+    --restart always \
     -d mongo
 
 ./start.bash
