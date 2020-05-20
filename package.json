@@ -1,0 +1,10 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "repository": "git@github.com:nguyenduclong-ict/docker.git",
+  "author": "Nguyễn Đức Long <longnd@rabiloo.com.vn>",
+  "license": "MIT",
+  "scripts": {
+    "mongo:start": "cd mongodb-server && docker-compose up -d"
+  }
+}

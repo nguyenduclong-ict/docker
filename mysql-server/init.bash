@@ -8,11 +8,12 @@ docker rm $CONTAINER_NAME
 # Create new contanier
 docker run \
     --name=$CONTAINER_NAME \
-    -e MYSQL_ROOT_HOST=% -e \
-    MYSQL_ROOT_PASSWORD=$PASSWORD \
+    -e MYSQL_ROOT_HOST=% \
+    -e MYSQL_ROOT_PASSWORD=$PASSWORD \
     -v $DATA_DIR:/var/lib/mysql \
     --network=database \
     -p 3306:3306 \
+    --restart always \
     -d mysql/mysql-server
 
 ./start.bash
