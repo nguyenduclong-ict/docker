@@ -17,7 +17,7 @@ services:
 
   redis:
     container_name: redis-server
-    image: mongo
+    image: redis
     ports:
       - ${REDIS_PORT}:${REDIS_PORT}
     volumes:
